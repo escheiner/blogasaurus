@@ -1,0 +1,16 @@
+body{
+  background-image:url('http://az616578.vo.msecnd.net/files/2017/05/14/6363040287681697498062198_Colorado-Mountains.jpg');
+}
+h3{
+  font-family: "Courier New", Courier, monospace;
+  padding: 20px;
+  opacity: .9;
+  width: 300px;
+  display: inline-block;
+  background-color: white;
+  opacity: .7;
+  border:3px solid blue;
+}
+#firstline{
+    margin-top: 150px;
+}
