@@ -1,11 +1,18 @@
 body{
   background-color: #ebeced;
 }
+
+#border{
+  border: 15px navy solid;
+  padding:30px;
+}
 .smalltext{
+  color:navy;
   font-family:swidth: 100%;
   font-style: italic;
   font-size: 15px;
   width: 1000px;
+  padding-left: 375px;
 }
 div{
   padding-left:200px;
@@ -14,6 +21,7 @@ div{
 }
 #ten{
   font-size: 50px;
+  color:lightblue;
 }
 .things{
 font-size: 25px;
@@ -21,19 +29,21 @@ width: 125;
 line-height: 100%;
 padding-left: 15px;
 }
+
 .list{
-  height:70px;
-  width:150px;
-  margin-bottom: 20px;
-  display:block;
-  border: 8px solid white;
-  padding:35px;
-  background-color: lightblue;
+  height:100px;
+  width:167px;
+  margin: 20px;
+  display:inline-block;
+  border: 8px solid navy;
+  padding:20px;
+  background-color: white;
   font-size: 20px;
   line-height: normal;
 
 }
-#two{
-  height:auto;
 
+#box{
+  display: block;
+  margin-left: 250px;
 }

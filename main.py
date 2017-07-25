@@ -14,26 +14,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-import webapp2
+import jinja2
+import os
 import logging
+import webapp2
 
-HOMEPAGE = """
-<html>
-  <head>
-    <title> Blogasaurus</title>
-    <link rel="stylesheet" href="/resources/home.css">
-  </head>
-  <body>
-    <center><h3 id= 'firstline'><a href="ten.html">Ten Things About Me</a></h3></center>
-  </body>
-</html>
-"""
+jinja_environment = jinja2.Environment(loader=
+    jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
+class TenHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/ten.html')
+        self.response.write(template.render())
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write(HOMEPAGE)
+        template = jinja_environment.get_template('templates/home.html')
+        self.response.write(template.render())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
+    ('/ten',TenHandler)
 ], debug= True)
